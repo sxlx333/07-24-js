@@ -1,0 +1,17 @@
+{
+  "name": "07-24-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "number": "node --watch ./js/kintamieji/number.js",
+    "dev": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "dead-server": "^1.0.9"
+  }
+}

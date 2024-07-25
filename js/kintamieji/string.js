@@ -8,6 +8,10 @@ String iniviavimo simboliai:
 Operatoriai:
 + sujungia string'us
 \ (escape) eskeipiname - funkcini simboli paverciame spausdintina
+
+Interpretavimas:
+    - tuscias string - false
+    - ne tuscias string - true
 */
 
 const single = 'Labas rytas, Lietuva!';
@@ -168,6 +172,3 @@ console.log('-------------------------------')
 const abbr = personName[0] + '.'  + personSurname[0] + '.';
 
 console.log(abbr);
-
-console.log('>>>', [++personName]);
-console.log('>>>', personName / 2);

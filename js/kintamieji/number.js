@@ -57,6 +57,10 @@ _ Infinity
 Operatoriai:
     - aritmetiniai: +,  -,   *,   /,  %, ++, --
     -aritmetiniai priskyrimo: +=, -=, /=, *=, %=
+
+Operatoriyu skaiciavimu vykdymo eiliskumas:
+    1) *, /
+    2) +, -, %
 */
 
 console.log(1);

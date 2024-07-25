@@ -100,3 +100,74 @@ console.log(6, textSize3);
 
 
 const labasRytasLietuva = 4;
+
+
+console.clear();
+
+const pomidoras = 'Pomidoras';
+console.log(pomidoras);
+
+const symbol1 = pomidoras[0];
+console.log(symbol1);
+
+const symbol2 = pomidoras[1];
+console.log(symbol2);
+
+const symbol3 = pomidoras[2];
+console.log(symbol3);
+
+const symbol4 = pomidoras[3];
+console.log(symbol4);
+
+const symbol5 = pomidoras[4];
+console.log(symbol5);
+
+const symbol6 = pomidoras[5];
+console.log(symbol6);
+
+const symbol7 = pomidoras[6];
+console.log(symbol7);
+
+const symbol8 = pomidoras[7];
+console.log(symbol8);
+
+const symbol9 = pomidoras[8];
+console.log(symbol9);
+
+const symbol100 = pomidoras[99];
+console.log(symbol100);
+
+console.log(pomidoras[3.14]);
+console.log(pomidoras[-1]);
+
+
+const agurkas = 'Zalias agurkas';
+
+const agurkasFirst = agurkas[0];
+console.log(agurkasFirst);
+
+const agurkasLast = agurkas[agurkas.length - 1];
+console.log(agurkasLast);
+
+const text = 'abcdef';
+const lastSymbol = text;
+console.log(lastSymbol);
+
+const lastSymbol1 = text[--text.length];
+const lastSymbol2 = text[text.length - 1];
+
+console.log(lastSymbol1);
+console.log(lastSymbol2);
+
+const personName = 'Vardenis';
+const personSurname = 'Pavardenis';
+
+console.log('-------------------------------')
+//  V.P.
+
+const abbr = personName[0] + '.'  + personSurname[0] + '.';
+
+console.log(abbr);
+
+console.log('>>>', [++personName]);
+console.log('>>>', personName / 2);

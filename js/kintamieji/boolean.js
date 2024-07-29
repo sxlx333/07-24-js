@@ -31,34 +31,36 @@ console.log(c);
 const keturi = true + true + true +  true;
 console.log(keturi);
 
-console.clear();
+
 
 console.log(true);
-console.log('-------------');
-console.log(true && true, true * true);
-console.log(true && false, true * false);
-console.log(false && true, false * true);
-console.log(false && false, false * false);
-console.log('-------------');
-console.log(true || true);
-console.log(true || false);
-console.log(false || true);
-console.log(false || false);
-console.log('-------------');
-console.log(true && true || true);
-console.log(true && true || false);
-console.log(true && false || true);    // true && false = false      false || true  = true
-console.log(false && true || true);
-console.log(true && false || false);
-console.log(false && true || false);
-console.log(false && false || true);
-console.log(false && false || false);
 
 console.clear();
-console.log('testing 4 types')
+console.log('-------------');
+console.log(true && true, true * true);   // true   1 * 1=1
+console.log(true && false, true * false);   //false  1*0=0
+console.log(false && true, false * true);   //false   0
+console.log(false && false, false * false);   //false  0
+console.log('-------------');
+console.log(true || true);       // true
+console.log(true || false);     //true
+console.log(false || true);      //true
+console.log(false || false);       //false
+console.log('-------------');
+console.log(true && true || true);      // true
+console.log(true && true || false);     // true                      true
+console.log(true && false || true);    // true && false = false       true
+console.log(false && true || true);     // false && true = false       true
+console.log(true && false || false);     // false                   false
+console.log(false && true || false);    // false                  false
+console.log(false && false || true);    // false                true
+console.log(false && false || false);   //false
 
-console.log(true && true && true && true);
-console.log(true && true && true && false);
+
+console.log('-----------4 types with AND operator----------')
+
+console.log(true && true && true && true);      //true
+console.log(true && true && true && false);     //false
 console.log(true && true && false && true);
 console.log(true && false && true && true);
 console.log(false && true && true && true);
@@ -67,7 +69,7 @@ console.log(true && true && false && false);
 console.log(true && false && false && true);
 console.log(false && false && true && true);
 console.log(true && false && true && false);
-console.log(false && true && false && true);
+console.log(false && true && false && true);        //visi false
 console.log(false && true && true && false);
 
 console.log(true && false && false && false);
@@ -78,9 +80,9 @@ console.log(false && true && false && false);
 console.log(false && false && false && false);
 
 
-console.log('-------------------------------');
+console.log('---------------4 types with OR operator----------------');
 
-console.log(true || true || true || true);
+console.log(true || true || true || true);  //true
 console.log(true || true || true || false);
 console.log(true || true || false || true);
 console.log(true || false || true || true);
@@ -89,21 +91,42 @@ console.log(false || true || true || true);
 console.log(true || true || false || false);
 console.log(true || false || false || true);
 console.log(false || false || true || true);
-console.log(true || false || true || false);
+console.log(true || false || true || false);  // visi true
 console.log(false || true || false || true);
 console.log(false || true || true || false);
 
 console.log(true || false || false || false);
 console.log(false || false || false || true);
 console.log(false || false || true || false);
-console.log(false || true || false || false);
+console.log(false || true || false || false);  // true
 
-console.log(false || false || false || false);
-
-
+console.log(false || false || false || false); //false 
 
 
+console.log('---------------4 types with 2 OR ir AND operator----------------');
 
+console.log(true || true && true || true);  
+console.log(true || true && true || false);
+console.log(true || true && false || true);
+console.log(true || false && true || true);
+console.log(false || true && true || true);
+
+console.log(true || true && false || false);
+console.log(true || false && false || true);
+console.log(false || false && true || true);
+console.log(true || false && true || false);  
+console.log(false || true && false || true);
+console.log(false || true && true || false);
+
+console.log(true || false && false || false);
+                // true  false     true
+console.log(false || false && false || true);
+                // false   false    true
+console.log(false || false && true || false);  
+                // false   false    false
+console.log(false || true && false || false);  
+                // false   false     false
+console.log(false || false && false || false); // false
 
 
 

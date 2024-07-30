@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "if": "node --watch ./js/kintamieji/if.js",
     "null": "node --watch ./js/kintamieji/null.js",
     "object": "node --watch ./js/kintamieji/object.js",
     "array": "node --watch ./js/kintamieji/array.js",

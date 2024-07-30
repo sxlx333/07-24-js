@@ -259,4 +259,28 @@ console.log(houseKeys);
 console.log(Object.keys);
 console.log(Object.keys({}));
 
+console.clear();
+// dinaminis reiksmiu priskyrimas
 
+const zoo = {                     // konstantanta nera problema nes keiciasi zoo objekte turinys or ne pats objektas
+    liutas: 2,
+
+};
+console.log(zoo);
+
+zoo.liutas += 3;
+console.log(zoo.liutas);
+
+zoo.dramblys = 1;
+console.log(zoo);
+
+zoo.dramblys += 2;
+console.log(zoo);
+
+
+
+const marks = [10, 2, 7, 4, 5];   // konstanta naudojama negu let tam, kad netycia nepakeist viso masyvo ar objekto
+console.log(marks);
+
+marks[1] = 8;
+console.log(marks);

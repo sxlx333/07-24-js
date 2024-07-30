@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "nd1": "node --watch ./js/kintamieji/nd1.js",
     "if": "node --watch ./js/kintamieji/if.js",
     "null": "node --watch ./js/kintamieji/null.js",
     "object": "node --watch ./js/kintamieji/object.js",

@@ -178,3 +178,85 @@ prekes[3]['kaina'] * prekes[3]['kiekis'] +
 prekes[4]['kaina'] * prekes[4]['kiekis'];
 const prekiuKainosSuma = 'Prekiu krepšelio vertė yra ' + Math.round(prekiuKaina)+ ' Eur ir ' + Math.round(prekiuKaina * 100 - 2000)+ ' centų'
 console.log(prekiuKainosSuma); 
+
+
+const pc = {
+    monitor: {
+        width: 1980,          // objektas objekte dvi reiksmes
+        height: 1080,
+    },
+    widthCM: 40,
+    ramGB: 16,
+    hdGB: 100,
+    keyboard: 'en',
+    mouse: true,
+    power: true,
+}
+
+console.log(pc);
+console.log(pc.ramGB);
+console.log(pc['mouse']);
+console.log(pc['keyboard']);
+console.log(pc.hdGB);
+
+const param = 'power';    // istraukti reiksme naudojant standartine israiska
+const param2 = 'keyboard';
+const param3 = 'monitor';
+
+console.log(pc[param]);    // istraukiame reiksme power is pc su param reiksme
+console.log(pc['power']);
+
+console.log(pc[param2]);
+console.log(pc['keyboard']);
+
+console.log(pc.monitor.width);      //istraukiama reiksme objekte esancio objekto reiksme
+console.log(pc.monitor.height);
+console.log(pc['monitor'].width); 
+console.log(pc['monitor']['height']);   // visos kombinacijos grazinti reiksme
+console.log(pc.monitor['width']);
+console.log(pc.monitor['height']);
+
+console.log('');
+console.log(pc[param3].width);
+console.log(pc[param3]['height']);
+
+
+console.clear();
+
+const crazy = {
+    title: 'some crazy...',
+    description: 'Prepare yourself...',
+    crazy_marks: [10, 2, 8, 4, 6],
+    'su tarpu': [2, 4, 6],
+    123: {
+        one: true,
+        two: true,
+        three: true,
+    },
+};
+
+console.log(crazy);
+console.log(crazy.title);
+console.log(crazy['description']);
+console.log(crazy.crazy_marks);
+console.log(crazy['su tarpu']);
+
+console.log(crazy['123']);
+console.log(crazy[123]);
+console.log(crazy.title.length);
+
+console.clear();
+
+const house = {
+    width: 16,
+    height: 3,
+    depth: 5,
+};
+
+const houseKeys = Object.keys(house);
+console.log(houseKeys);
+
+console.log(Object.keys);
+console.log(Object.keys({}));
+
+

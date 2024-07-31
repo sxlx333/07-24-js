@@ -225,3 +225,20 @@ if (sarasas11[0].length <= sarasas11[4].length) {
 } else {
     console.log('Bandykite kitą kartą');
 };
+
+console.clear();
+
+// jeigu randa spalva isvercia lietuviskai paraso
+
+const colors = ['red', 'green', 'blue'];
+const color = 'yellow';
+
+if (color === colors[0]) {
+    console.log('Raudona');
+} else if (color === colors[1]) {
+    console.log('Zalia');
+} else if (color === colors[2]) {
+    console.log('Melyna');
+} else {
+    console.log('Ups...');
+}

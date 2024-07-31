@@ -11,6 +11,14 @@ visi:  >, <, >=, <=, ==, !=, ===, !==
 naudotini:  >, <, >=, <=, ===, !==
 nenaudotini: ==, !=,
 
+ZINOTINI (crazy) dalykai:
+
+-true yra pozityvus, false yra negatyvus
+- visi skaiciai yra pozityvus, isskyrus nuli (0)
+- visi stringai pozityvus, isskyrus tusti ('')
+- visi array ([]) yra pozityvus
+- visi object ({}) yra pozityvus
+
 */
 
 console.log('START');

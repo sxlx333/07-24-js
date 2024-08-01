@@ -70,3 +70,26 @@ for (let j = 20; j <  30; ) {
     }
     j++;
 }
+
+
+
+
+
+//          i: 0   1  2  3  4
+const marks = [10, 2, 4, 8, 6];
+let sum = 0;
+
+for (let i = 0; i < marks.length; i++) {
+    console.log(i, '-->', marks[i]);
+    sum += marks[i];
+}
+
+console.log(sum);
+
+// atvirskciai atspausdinti nuo 6 8 4 2 10
+
+for (let i = marks.length-1; i >= 0; i--) {
+    console.log('>>>', marks[i]);
+}
+
+// N.D. kuo daugiau variaciju kaip parasyti cikla tam, kad gauti atbuline tvarka reiksmes kaip virs komentaro

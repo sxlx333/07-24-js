@@ -1,8 +1,10 @@
 {
   "name": "07-24-js",
   "version": "1.0.0",
+  "type":"module",  
   "main": "index.js",
   "scripts": {
+    "import": "node --watch ./js/kintamieji/lib/import.js",
     "for": "node --watch ./js/kintamieji/for.js",
     "function": "node --watch ./js/kintamieji/function.js",
     "ternary": "node --watch ./js/kintamieji/ternary.js",
@@ -16,7 +18,7 @@
     "number": "node --watch ./js/kintamieji/number.js",
     "dev": "node --watch ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,3 +27,4 @@
     "dead-server": "^1.0.9"
   }
 }
+

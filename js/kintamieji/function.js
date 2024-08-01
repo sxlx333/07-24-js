@@ -118,3 +118,5 @@ console.log(evenOdd2(4));
 console.log(evenOdd2(5));
 console.log(evenOdd3(6));
 console.log(evenOdd3(7));
+
+

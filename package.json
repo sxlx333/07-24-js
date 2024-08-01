@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "for": "node --watch ./js/kintamieji/for.js",
     "function": "node --watch ./js/kintamieji/function.js",
     "ternary": "node --watch ./js/kintamieji/ternary.js",
     "nd1": "node --watch ./js/kintamieji/nd1.js",

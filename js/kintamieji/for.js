@@ -93,3 +93,33 @@ for (let i = marks.length-1; i >= 0; i--) {
 }
 
 // N.D. kuo daugiau variaciju kaip parasyti cikla tam, kad gauti atbuline tvarka reiksmes kaip virs komentaro
+console.clear();
+console.log('---1)---');
+marks.findLast(elem => console.log(elem));
+
+console.log('---2)---');
+marks.reverse().forEach(arrayItem =>
+    console.log(arrayItem)
+)
+console.log('---3)---');
+const marks1 = [10, 2, 4, 8, 6];
+marks1.forEach(function(x, index, the_array) {
+    let x_kazkoks = the_array[the_array.length-1-index]
+    console.log(x_kazkoks);
+})
+console.log('---4)---');
+const marks2 = [10, 2, 4, 8, 6];
+marks2.reduceRight((total, item) => {
+    console.log(item);
+    return item;
+})
+
+console.log('---5)---');
+const marks3 = [10, 2, 4, 8, 6];
+marks3.reverse().map(n => console.log(n));
+
+
+
+
+
+

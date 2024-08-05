@@ -152,16 +152,17 @@ const agurkasFirst = agurkas[0];
 console.log(agurkasFirst);
 
 const agurkasLast = agurkas[agurkas.length - 1];
+console.log(agurkas.length - 1);
 console.log(agurkasLast);
 
 const text = 'abcdef';
 const lastSymbol = text;
 console.log(lastSymbol);
 
-const lastSymbol1 = text[--text.length];
+// const lastSymbol1 = text[--text.length];  //nesuprantama
 const lastSymbol2 = text[text.length - 1];
 
-console.log(lastSymbol1);
+// console.log(lastSymbol1);
 console.log(lastSymbol2);
 
 const personName = 'Vardenis';

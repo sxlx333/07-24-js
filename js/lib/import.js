@@ -15,3 +15,4 @@ console.log(matke.plus(7, 5));
 console.log(matke.minus(7, 5));
 console.log(matke.star(7, 5));
 console.log(matke.slash(7, 5));
+console.log(div(8, 5));

@@ -231,7 +231,7 @@ console.clear();
 // jeigu randa spalva isvercia lietuviskai paraso
 
 const colors = ['red', 'green', 'blue'];
-const color = 'yellow';
+const color = 'red';
 
 if (color === colors[0]) {
     console.log('Raudona');

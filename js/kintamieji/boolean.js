@@ -7,7 +7,7 @@ true -> 1
 false -> 0
 
 Operatoriai
-    && AND      turi pirmenybe 
+    && AND     !!! TURI PIRMENYBE 
     || OR
 */
 

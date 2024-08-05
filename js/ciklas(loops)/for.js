@@ -93,7 +93,7 @@ for (let i = marks.length-1; i >= 0; i--) {
 }
 
 // N.D. kuo daugiau variaciju kaip parasyti cikla tam, kad gauti atbuline tvarka reiksmes kaip virs komentaro
-console.clear();
+// console.clear();
 console.log('---1)---');
 marks.findLast(elem => console.log(elem));
 

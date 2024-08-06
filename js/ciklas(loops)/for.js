@@ -42,7 +42,7 @@ console.log('-------- su masyvu ---------');
 const dict = ['Labas', 'rytas', 'Lietuva', 'sakau', 'tau'];
 
 let index = 0;
-console.log((index + 1) + ') ' + dict[index]);
+console.log((index + 1) + ') ' + dict[index]);   // -> 1) Labas
 index++;
 
 console.log((index + 1) + ') ' + dict[index]);
@@ -59,7 +59,7 @@ for (let i = 0; i < dict.length; i++) {               // ismokti mintinai
 }
 
 
-console.clear();
+// console.clear();
 
 
 for (let j = 20; j <  30; ) {
@@ -73,21 +73,23 @@ for (let j = 20; j <  30; ) {
 
 
 
-
+console.clear();
 
 //          i: 0   1  2  3  4
 const marks = [10, 2, 4, 8, 6];
 let sum = 0;
-
+//             0 < 5    0 = 0 + 1
 for (let i = 0; i < marks.length; i++) {
     console.log(i, '-->', marks[i]);
     sum += marks[i];
+    console.log(marks.length-1);
+    
 }
 
 console.log(sum);
 
 // atvirskciai atspausdinti nuo 6 8 4 2 10
-
+//                    4     >=   0    
 for (let i = marks.length-1; i >= 0; i--) {
     console.log('>>>', marks[i]);
 }

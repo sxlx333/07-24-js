@@ -39,10 +39,26 @@ function rangeSum(start, end) {
 // 2
 // 3
 // 4
+// let sum = 0;
+//     for (let i = start; i <= end; i++) {   // sprendimas veikia iki milijardo
+//         sum += i;
+//     }
+if (start > end) {
+    return 'ERROR: pirmasis skaicius negali buti didesnis'
+}
 let sum = 0;
-    for (let i = start; i <= end; i++) { 
+if (start === 0) {
+    sum = end * (end + 1) / 2;
+} else if (end === 0) {
+    sum = start * (start - 1) / 2;
+} else if (start < 0 && end > 0){
+    sum = end * (end + 1) / 2;
+    sum += start * (start - 1) / 2;
+} else {
+    for (let i = start; i <= end; i++) {
         sum += i;
     }
+}
 // 3. logikoje gauto rezultato validavimas
     if (sum % 1 !== 0) {
         return 'ERROR: ';
@@ -194,6 +210,11 @@ console.log(rangeSum(-Infinity, -Infinity));
 console.log(rangeSum(5, NaN));
 console.log(rangeSum(NaN, 5));
 console.log(rangeSum(NaN, NaN));
+console.log('test');
+console.log(rangeSum(0, 1_000_000_000));
+console.log(rangeSum(-1_000_000_000, 0));
+
+
 
 
 

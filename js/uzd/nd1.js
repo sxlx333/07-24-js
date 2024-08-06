@@ -226,7 +226,7 @@ if (sarasas11[0].length <= sarasas11[4].length) {
     console.log('Bandykite kitą kartą');
 };
 
-console.clear();
+// console.clear();
 
 // jeigu randa spalva isvercia lietuviskai paraso
 

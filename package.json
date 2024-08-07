@@ -13,6 +13,7 @@
     "for-in": "node --watch ./js/ciklas(loops)/for-in.js",
     "for-of": "node --watch ./js/ciklas(loops)/for-of.js",
     "for": "node --watch ./js/ciklas(loops)/for.js",
+    "arrow": "node --watch ./js/function/arrow.js",
     "function": "node --watch ./js/function/function.js",
     "ternary": "node --watch ./js/if/ternary.js",
     "nd1": "node --watch ./js/uzd/nd1.js",

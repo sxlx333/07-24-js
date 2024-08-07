@@ -4,6 +4,7 @@
   "type":"module",  
   "main": "index.js",
   "scripts": {
+    "number-method": "node --watch ./js/method/number.js",
     "nd3": "node --watch ./js/uzd/nd3.js",
     "stringreverse": "node --watch ./js/uzd/stringreverse.js",
     "typeof": "node --watch ./js/if/typeof.js",

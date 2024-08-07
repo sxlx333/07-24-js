@@ -23,7 +23,7 @@ if (age >= ageLimit) {
 console.log('Message:', msg);
 
 const msg2 = age >= ageLimit 
-    ? msgOk 
+    ? msgOk        // ? - supaprastintas if else (question mark operator ? , also known as question — colon or the ternary operator, is used to shorten an if else statement into one line of code.)
     : msgErr;
 
 console.log('Message:', msg2);

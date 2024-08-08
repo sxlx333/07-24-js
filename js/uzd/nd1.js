@@ -1,4 +1,5 @@
-console.log('skaiciai kintamieji');
+console.log('KINTAMUJU INICIJAVIMAS');
+console.log('1. a. skaiciai kintamieji');
 const skaicius1 = 3;
 console.log(skaicius1);
 const skaicius2 = 5;
@@ -7,7 +8,7 @@ const skaicius3 = 6;
 console.log(skaicius3);
 
 console.log('');
-console.log('teksto tipos reiksmes kintamieji');
+console.log('2. a. teksto tipos reiksmes kintamieji');
 const zodis1 = 'labas';
 console.log(zodis1);
 const zodis2 = 'rytas';
@@ -16,7 +17,7 @@ const zodis3 = 'Lietuva';
 console.log(zodis3);
 
 console.log('');
-console.log('saraso kintamieji su 5 skaiciu reiksmemis');
+console.log('3. a. saraso(masyvo) kintamieji su 5 skaiciu reiksmemis');
 const sarasas1 = [1, 2, 3, 4, 5];
 console.log(sarasas1);
 const sarasas2 = [5, 4, 3, 2, 10];
@@ -25,7 +26,7 @@ const sarasas3 = [4, 4, 4, 4, 4];
 console.log(sarasas3);
 
 console.log('');
-console.log('saraso kintamieji su 5 teksto reiksmemis');
+console.log('4. a. saraso(masyvo) kintamieji su 5 teksto reiksmemis');
 const sarasas11 = ['Tomas', 'Jonas', 'Ona', 'Valdas', 'Egle'];
 console.log(sarasas11);
 const sarasas12 = ['pomidoras', 'agurkas', 'morka', 'cesnakas', 'svogunas'];
@@ -33,19 +34,21 @@ console.log(sarasas12);
 const sarasas13 = ['green', 'yellow', 'blue', 'red', 'black'];
 console.log(sarasas13);
 
+
 console.log('');
-console.log('skaiciu kintamuju suma');
+console.log('VEIKSMAI SU KINTAMAISIAIS');
+
+
 const sum = skaicius1 + skaicius2 + skaicius3;
-console.log(sum);
+console.log('1. skaiciu kintamuju suma: ',sum);
 
 
 console.log('');
-console.log('sujungti teksto kintamieji');
 const sumaZodziu = zodis1 + ' ' + zodis2 + ' ' + zodis3;
-console.log(sumaZodziu);
+console.log('2. sujungti teksto kintamieji: ',sumaZodziu);
 
 console.log('');
-console.log('apskaiciuoti sarasu skaiciai pagal logika 1-2+3-4+5')
+console.log('3. apskaiciuoti sarasu skaiciai pagal logika 1-2+3-4+5')
 const veiksmasSaraso1 = sarasas1[0] - sarasas1[1] + sarasas1[2] - sarasas1[3] + sarasas1[4];
 console.log(veiksmasSaraso1);
 const veiksmasSaraso2 = sarasas2[0] - sarasas2[1] + sarasas2[2] - sarasas2[3] + sarasas2[4];
@@ -54,7 +57,7 @@ const veiksmasSaraso3 = sarasas3[0] - sarasas3[1] + sarasas3[2] - sarasas3[3] + 
 console.log(veiksmasSaraso3);
 
 console.log('');
-console.log('Sujungti sarasus su tekstu reiksme nuo galo iki pradzios su tarpu kableliu')
+console.log('4. Sujungti sarasus su tekstu reiksme nuo galo iki pradzios su tarpu kableliu')
 const sujungimasSaraso1 = sarasas11[4] + ', ' + sarasas11[3] + ', ' + sarasas11[2] + ', ' + sarasas11[1] + ', '+  sarasas11[0];
 console.log(sujungimasSaraso1);
 
@@ -112,7 +115,7 @@ if (15 <= 25) {
 };
 
 console.log('');
-console.log('isveskite teksto kintamuju tipo ilgius');
+console.log('2. isveskite teksto kintamuju tipo ilgius');
 console.log(zodis1);
 console.log(zodis1.length);
 console.log(zodis2);
@@ -177,10 +180,13 @@ console.log(sarasas1[0].length);
 console.log(sarasas11[0]);
 console.log(sarasas11[0].length);
 
+console.log(sarasas11[4]);
+console.log(sarasas11[4].length);
+
 
 console.log('');
 console.log('5. a)');
-if (sarasas11[0].length > sarasas11[4].length) {
+if (sarasas11[0].length > sarasas11[4].length) {      // 5  > 4
     console.log('pomidoras');
 } else {
     console.log('Bandykite kitą kartą');

@@ -219,6 +219,177 @@ console.log('Labas'.repeat(10));
 console.log(repeatText('Labas', 10)); 
 
 
+console.log(String.prototype.replace);          // pakeicia simbolius per string'u reiksmes
+console.log('Aaaaaaa'.replace('aa', '---'));
+console.log('Aaaaaaa'.replace('aaa', '---'));
+console.log('Aaaaaaa'.replace('aaaa', '---'));
+console.log('Aaaaaaa'.replace('aaaaa', '---'));
+console.log('Aaaaaaa'.replace('aaaaaa', '---'));
+console.log('Aaaaaaa'.replace('aaaaaaa', '---'));
+
+let summer = 'Vasara';
+console.log(summer);
+
+summer = summer.replace('a', '-');                  //atnaujinamas kintamas kita reiksme
+console.log(summer);
+
+console.log(summer.replace('a', '-'));         // ziurime pakeiciama reiksme
+console.log(summer);       // originalas tekstas
+
+// replace visada grazina nauja rezultata
+
+
+let bananas = 'Bananas';
+console.log(bananas);
+
+bananas = bananas.replace('a', '-');    // kiekviena karta replace'ina po viena  a raide
+console.log(bananas);
+
+bananas = bananas.replace('a', '-');
+console.log(bananas);
+
+bananas = bananas.replace('a', '-');
+console.log(bananas);
+
+bananas = bananas.replace('a', '-');
+console.log(bananas);
+
+
+let pavasaris = 'pavasaris';
+console.log(pavasaris);
+
+pavasaris = pavasaris.replaceAll('a', '*');    // pakeicia visas raides
+console.log(pavasaris);
+
+
+console.clear();
+console.log(String.prototype.slice);
+
+console.log('pomidoras'.slice());   // be parametru nieko nekeicia
+console.log('pomidoras'.slice(0));
+console.log('pomidoras'.slice(1));
+console.log('pomidoras'.slice(2));
+console.log('pomidoras'.slice(3));
+console.log('pomidoras'.slice(4));   // grazina nuo pradziu likuses raides
+console.log('pomidoras'.slice(0));
+
+console.log('pomidoras'.slice(-1));
+console.log('pomidoras'.slice(-2)); // nuo galo grazina raides visas likuses
+console.log('pomidoras'.slice(-3));
+console.log('pomidoras'.slice(-4));
+console.log('pomidoras'.slice(-5));
+
+console.log('-----------');
+console.log('pomidoras'.slice(0, 0));  // start yra paimti end yra iki to vaziuoti bet jo nepaima 
+console.log('pomidoras'.slice(0, 1));
+console.log('pomidoras'.slice(0, 4));
+console.log('pomidoras'.slice(2, 4));  
+console.log('pomidoras'.slice(2, 6));
+console.log('pomidoras'.slice(0, 0));
+
+console.log('pomidoras'.slice(0, -1));
+console.log('pomidoras'.slice(0, -2));
+console.log('pomidoras'.slice(0, -3));
+console.log('pomidoras'.slice(0, -4));
+console.log('pomidoras'.slice(1, -3));
+console.log('pomidoras'.slice(2, -3));  // mido    2 - nuo m       -3 - nuima (ras)
+console.log('pomidoras'.slice(3, -2));  // idor
+
+console.clear();
+console.log(String.prototype.split);  // grazina masyva pasalindamas simboli nustatyta reiksme
+console.log('labas'.split('a'));
+console.log('labas'.split('b'));
+console.log('bananas'.split('a'));
+console.log('bananas'.split('ana'));  // is eiles randa 'ana' ir iskerpa pirma reiksme
+console.log('bananas'.split('an'));    // grazina masyva 3 reiksmes b + tuscias txt + as       bananas (an) -> (b , , as)
+console.log('bananas'.split('bana'));    //bana,nas -> ('', 'nas')
+console.log('bananas'.split('nas'));     // bana(nas), -> ('bana', '')
+console.log('bananas'.split('bananas'));  // (bananas), -> ('','')
+console.log('');
+console.log('bananas'.split('x'));
+console.log('bananas'.split(''));  // gauni masyva su individualiais simboliais  NAUDINGA!!
+
+console.log('bananas'.split('')[3]);   // klaida norint rasti viena atskira simboli
+console.log('bananas'[3]);            // paprastai galima rasti
+
+
+//viena paskui kita isvesti          PATS STRING'AS YRA MASYVAS!!!!
+
+const ban = 'zodis'.split('');
+for (let i = 0; i < ban.length; i++) {
+    console.log(ban[i]);
+}
+
+
+const str = 'Labas rytas Lietuva';     // DAZNIAUSIAS ATVEJIS SPLITO PANAUDOJIMAS
+const dict = str.split(' ');         // galima klausinet is HTML tekstus, kiek tekste yra zodziu, unikaliu zodziu, sakiniu, klausimu, koks ilgiausias, trumpiausias zodis
+console.log(dict);                    // teksto analize
+console.log('Zodziu kiekis:', dict.length);
+
+console.log(String.prototype.toLowerCase);
+console.log(String.prototype.toUpperCase);
+
+console.log('Labas'.toLowerCase());
+console.log('Labas'.toUpperCase());
+console.log('Labas'.toLocaleLowerCase());    // veikia taip pat
+console.log('Labas'.toLocaleUpperCase());
+
+// kaip suzinoti ar zodis yra is diziosios raides?  analogiskai ar zodis is mazosios raides
+
+function isUpperCaseWord(str) {
+    //      l        l > L
+    if (str[0] === str[0].toUpperCase()) {   // lyginame pirma raide su dideesne raide  ar tikrai sutampa
+        return true;
+    }
+    return false;  //pagal nutylejima zodziai nebuna is didziosis
+}
+
+
+console.log(isUpperCaseWord('labas'));
+console.log(isUpperCaseWord('Labas'));
+
+
+console.log('');
+// ar zodis is mazosios raides
+function isLowerCaseWord(str) {
+    //      l        l > L
+    if (str[0] === str[0].toLowerCase()) {   // lyginame pirma raide su dideesne raide  ar tikrai sutampa
+        return true;
+    }
+    return false;  //pagal nutylejima zodziai nebuna is didziosis
+}
+console.log(isLowerCaseWord('labas'));
+console.log(isLowerCaseWord('Labas'));
 
 
 
+console.log(String.prototype.trim);
+console.log(String.prototype.trimStart);           // VEIKIA NUO TEKSTO PRADZIOS IR TEKSTO PABAIGOS TARP SIMBOLIU NIEKO NEDARO
+console.log(String.prototype.trimEnd);
+
+console.log(`"${'pavasaris'.trim()}"`);
+console.log(`"${'pavasaris'.trimStart()}"`);
+console.log(`"${'pavasaris'.trimEnd()}"`);
+
+
+console.log(`"${'pavasaris siltas'.trim()}"`);
+console.log(`"${'pavasaris siltas'.trimStart()}"`);
+console.log(`"${'pavasaris siltas'.trimEnd()}"`);
+
+console.log(`"${'pavasaris mano kieme                      '.trim()}"`);
+console.log(`"${'pavasaris mano kieme                      '.trimStart()}"`);
+console.log(`"${'pavasaris mano kieme                      '.trimEnd()}"`);
+
+console.log(`"${'                      pavasaris mano kieme yraa'.trim()}"`);
+console.log(`"${'                      pavasaris mano kieme yraa'.trimStart()}"`);
+console.log(`"${'                      pavasaris mano kieme yraa'.trimEnd()}"`);
+
+console.log(`"${'                      trim                    '.trim()}"`);             // meta viska
+console.log(`"${'                      trimStart                    '.trimStart()}"`);  // valo prieki
+console.log(`"${'                      trimEnd                    '.trimEnd()}"`);      // valo gala
+
+
+
+console.log(`"${'                  a          b                    '.trim()}"`);             // nieko nedaro tarp
+console.log(`"${'                  a          b                    '.trimStart()}"`);  // nieko nedaro tarp
+console.log(`"${'                  a          b                    '.trimEnd()}"`);      // nieko nedaro tarp

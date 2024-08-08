@@ -393,3 +393,33 @@ console.log(`"${'                      trimEnd                    '.trimEnd()}"`
 console.log(`"${'                  a          b                    '.trim()}"`);             // nieko nedaro tarp
 console.log(`"${'                  a          b                    '.trimStart()}"`);  // nieko nedaro tarp
 console.log(`"${'                  a          b                    '.trimEnd()}"`);      // nieko nedaro tarp
+
+
+/*
+ .toString() yra tas pats kaip '' +             
+  
+  '' + yra geresnis budas
+
+
+> 'labas'.toString()
+'labas'
+> (44).toString()
+'44'
+> '' + 44
+'44'
+> '' + true
+'true'
+> '' + false
+'false'
+> (true).toString()
+'true'
+> (false).toString()
+'false'
+> [1, 2, 3]
+[ 1, 2, 3 ]
+> [1, 2, 3].toString()
+'1,2,3'
+> '' + [1, 2, 3]
+'1,2,3'
+>
+*/

@@ -86,12 +86,14 @@ console.log('skaiciu internvale tarp -18 ir 18, besidalijanciu be liekanos is 5 
 console.log('skaiciu internvale tarp -18 ir 18, besidalijanciu be liekanos is 7 yra ', suma9, ' vienetai');
 
 console.clear();
-
+console.log('Funkcija pavadinimu “tusciaFunkcija”:');
 function tusciaFunckija() {
     return false;
 }
 console.log(tusciaFunckija());
 
+
+console.log('Funkcija pavadinimu “daugyba”:');
 function daugyba(skaicius1, skaicius2) {
     const skaicius3 = (skaicius1 * skaicius2);
     
@@ -102,32 +104,33 @@ console.log(daugyba(143, 212));
 console.log(daugyba(2, 2));
 
 
+console.clear();
+console.clear();
+console.log('3. funkcija pavadinimu "skaitmenuKiekisSkaiciuje"');
+
+function skaitmenuKiekisSkaiciuje(a) {
+    if (typeof a !== 'number') {
+        return 'Pateikta netinkamo tipo reikšmė';
+    } if (isNaN(a)) {
+        return 'Pateikta netinkamo tipo reikšmė';
+    }
+    let b = [];
+    while (a >= 10) {
+        b.unshift(a % 10);
+        a = Math.floor(a / 10);
+        console.log(a);
+        console.log(b);
+    }
+    b.unshift(a);
+    return b;
+}
+console.log(skaitmenuKiekisSkaiciuje(5));
+console.log(skaitmenuKiekisSkaiciuje(781));
+console.log(skaitmenuKiekisSkaiciuje(37060123456));
+console.log(skaitmenuKiekisSkaiciuje(true));
+console.log(skaitmenuKiekisSkaiciuje('ads'));
+console.log(skaitmenuKiekisSkaiciuje(NaN));
 
 
 
-
-
-
-
-
-
-// console.clear();
-// let sum = 0;
-// let suma1= 0;
-// let suma2= 0;
-// for (let i = 0; i <= 11; i++) {
-//         if (i % 3 === 0) {
-//         sum += 1;
-//     }
-//     {
-//         if (i % 5 === 0) {
-//         suma1 += 1;
-//     }
-//     if (i % 7 === 0) {
-//         suma2 += 1;
-//     }
-// }
-// }
-// console.log('Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra' , sum, 'vienetai.');
-// console.log('Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 5 yra' , suma1, 'vienetai.');
-// console.log('Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra' , suma2, 'vienetai.');
+//  console.log(Math.floor(781 / 10));

@@ -13,12 +13,12 @@ function stringReverse(str) {
 
     let reversedString = '';
 
-    // for (let i = str.length; i >= 0; i--){
-    //     reversedString += str[i];
-    // }
-     for (let i = 0; i < str.length; i++){
-        reversedString = str[i] + reversedString;
-     }
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedString += str[i];
+    }
+    //  for (let i = 0; i < str.length; i++){
+    //     reversedString += str[i] ;
+    //  }
     return reversedString;
 }
 
@@ -34,15 +34,21 @@ console.log(stringReverse(undefined));
 console.log(stringReverse());
 console.log(stringReverse(stringReverse));
 
-
-
 console.log(stringReverse(''));
+
+
 console.log('---------------');
 
 console.log(stringReverse('kazkas'));
 console.log(stringReverse('labas'), '-->', 'sabal');
 console.log(stringReverse('sedek'), '-->', 'kedes');
-console.log(stringReverse('sedek uzu kedes'), '-->', 'sedek uzu kedes');
-console.log(stringReverse('sula'), '-->', 'alus');
-console.log(stringReverse('taco cat'), '-->', 'tac ocat');
-console.log(stringReverse('sigis'), '-->', 'sigis');
+
+
+
+
+// let lol = 'labas';
+// console.log(lol.length);
+// console.log(lol[5]);
+
+// console.log(lol.length - 1);
+// console.log(lol[4]);

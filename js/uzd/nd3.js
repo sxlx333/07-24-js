@@ -133,4 +133,7 @@ console.log(skaitmenuKiekisSkaiciuje(NaN));
 
 
 
-//  console.log(Math.floor(781 / 10));
+
+
+
+

@@ -129,5 +129,13 @@ console.log(false || true && false || false);
 console.log(false || false && false || false); // false
 
 
-
-
+/*
+ &&&   16
+ &&|         
+ &|&
+ |&&
+ &||
+ ||&
+ |&|
+ |||
+*/

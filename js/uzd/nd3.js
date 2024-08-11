@@ -118,11 +118,9 @@ function skaitmenuKiekisSkaiciuje(a) {
     while (a >= 10) {
         b.unshift(a % 10);
         a = Math.floor(a / 10);
-        console.log(a);
-        console.log(b);
     }
     b.unshift(a);
-    return b;
+    return b.length;
 }
 console.log(skaitmenuKiekisSkaiciuje(5));
 console.log(skaitmenuKiekisSkaiciuje(781));
@@ -131,6 +129,25 @@ console.log(skaitmenuKiekisSkaiciuje(true));
 console.log(skaitmenuKiekisSkaiciuje('ads'));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
 
+
+
+console.clear();
+// function didziausiasSkaiciusSarase(Kintamasis) {
+//     if (!Kintamasis == '') {
+//         console.log('Negali buti tuscias');
+//     } else if (typeof kintamasis != object) {
+
+//     }
+// }
+
+
+
+
+
+
+
+// let array = [1, 2, 3];
+// console.log(typeof array);
 
 
 

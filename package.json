@@ -4,6 +4,9 @@
   "type":"module",  
   "main": "index.js",
   "scripts": {
+    "arrayfilter": "node --watch ./js/method/array-filter.js",
+    "arraymap": "node --watch ./js/method/array-map.js",
+    "array-method": "node --watch ./js/method/array.js",
     "string-method": "node --watch ./js/method/string.js",
     "number-method": "node --watch ./js/method/number.js",
     "nd3": "node --watch ./js/uzd/nd3.js",

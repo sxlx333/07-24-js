@@ -1,18 +1,95 @@
 /*
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 */
+console.log(Array.isArray);
+console.log(Array.isArray([]));
+console.log(Array.isArray([1]));
+console.log(Array.isArray(['asd']));
+console.log(Array.isArray());
+console.log(Array.isArray(2));
+console.log(Array.isArray('asd'));
+console.log(Array.isArray(true));
+console.log(Array.isArray({}));
+console.log(Array.isArray(null));
 
-
-
+console.log();
 console.log(Array.prototype.fill);   // uzpildo
+const simtasZuikiu = new Array(100).fill(0);
+console.log(simtasZuikiu);
+
+for (let i = 0; i < simtasZuikiu.length; i++) {
+    simtasZuikiu[i] = i;
+}
+console.log(simtasZuikiu);
+
+
+
+
+
+
+console.log(Array.prototype.at);
+console.log([10, 2, 8, 4, 6].at(0));
+console.log([10, 2, 8, 4, 6].at(1));
+console.log([10, 2, 8, 4, 6].at(2));
+console.log([10, 2, 8, 4, 6].at(3));
+console.log([10, 2, 8, 4, 6].at(4));
+console.log([10, 2, 8, 4, 6].at(5));
+console.log([10, 2, 8, 4, 6].at(-1));
+console.log([10, 2, 8, 4, 6].at(-2));
+console.log([10, 2, 8, 4, 6].at(-3));
+console.log([10, 2, 8, 4, 6].at(-4));
+console.log([10, 2, 8, 4, 6].at(-5));
+console.log([10, 2, 8, 4, 6].at(-6));
+
+console.log();
+
 
 console.log(Array.prototype.concat); // sudeda [1], 2 + [3, 4, 5] =  1, 2, 3, 4, 5
 
+console.log([1, 2].concat(3));
+console.log([1, 2].concat([3, 4]));
+console.log([1, 2].concat([3, 4], 5));
+console.log([1, 2].concat([3, 4], 5, [6, 7], 8));
+
+console.log()
+
+
+
+
+
 console.log(Array.prototype.includes); // grazina true/false
+
+console.log([10, 2, 8, 4, 6].includes(10));
+console.log([10, 2, 8, 4, 6].includes(2));
+console.log([10, 2, 8, 4, 6].includes(5));
+console.log([10, 2, 8, 4, 6].includes(28));
+
+console.log();
+
+
 
 console.log(Array.prototype.indexOf); // nurodo indeksa reiksmes [10, 2, 8] indexif(2) = 1
 
+console.log([10, 2, 8, 4, 6].indexOf(10));
+console.log([10, 2, 8, 4, 6].indexOf(2));
+console.log([10, 2, 8, 4, 6].indexOf(5));
+console.log([10, 2, 8, 4, 6].indexOf(28));
+
+console.log();
+
 console.log(Array.prototype.join); // sujungia zodzius/reksmes | atvirkstinis variantas split'ui
+
+const text = 'Labas rytas Lietuva';
+const words = text.split(' ');
+console.log(words);
+
+console.log(words.join());
+console.log(words.join(''));
+console.log(words.join(','));
+console.log(words.join(', ') + '.');
+console.log(words.join(' --==-- '));
+
+console.log();
 
 console.log(Array.prototype.reverse); // vaizduoja atvirksciai   [1, 2, 3]  = [3, 2, 1] JIS MODIFIKUOJA REIKSMES KEICIA ORIGINALIUS DUOMENIS!!!!
 
@@ -28,7 +105,7 @@ console.log(numbers);
 
 
 const pom = 'Pomidoras';
-const pomLetters = pom.split('');
+const pomLetters = pom.split(''); // split jeidu 1 zodis grazina simbolius
 console.log(pomLetters);
 pomLetters.reverse();
 console.log(pomLetters);

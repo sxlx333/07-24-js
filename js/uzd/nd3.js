@@ -114,13 +114,13 @@ function skaitmenuKiekisSkaiciuje(a) {
     } if (isNaN(a)) {
         return 'Pateikta netinkamo tipo reikšmė';
     }
-    let b = [];
-    while (a >= 10) {
-        b.unshift(a % 10);
-        a = Math.floor(a / 10);
+    let b = [];          // masyvas kuriame bus saugomos reiksmes
+    while (a >= 10) {           // kol ivestas skaicius didesnis uz 10     jei <10, pvz, 5 < 10 tai 5 skipina while loop
+        b.unshift(a % 10);       // unshift prideda naujas reiksmes (a) i tuscio masyvo 'b' prieky is eiles
+        a = Math.floor(a / 10);   // randa po viena skaitmeni
     }
-    b.unshift(a);
-    return b.length;
+    b.unshift(a);      // prideda i tuscia masyva reiksmes
+    return b.length;      // isspausdina masyva su naujomis reiksmemis ilgi
 }
 console.log(skaitmenuKiekisSkaiciuje(5));
 console.log(skaitmenuKiekisSkaiciuje(781));
@@ -135,17 +135,17 @@ console.clear();
 console.log('Funkcija pavadinimu “didziausiasSkaiciusSarase”');
 
 function didziausiasSkaiciusSarase(Kintamasis) {
-    let didziausiasSkaicius = Kintamasis[0];
+    let didziausiasSkaicius = Kintamasis[0];           // nustatoma pirma reiksme masyve diziausia kaip default
      if (Array.isArray(Kintamasis) === false) {
         return ('Pateikta netinkamo tipo reikšmė');
-    } else if (Kintamasis.length === 0) {
+    } else if (Kintamasis.length === 0) {            // jeigu masyvo ilgis lygus nuliui = tuscias
         return ('Pateiktas sąrašas, masyvas negali būti tuščias');
     } else {
         
-        for (let i = 0; i < Kintamasis.length; i++) {
+        for (let i = 0; i < Kintamasis.length; i++) {     // kol  0 pasiekia parasyto masyvo ilgi - pereina per visas reiksmes
             
-            if (Kintamasis[i] > didziausiasSkaicius) {
-                didziausiasSkaicius = Kintamasis[i];
+            if (Kintamasis[i] > didziausiasSkaicius) {  // jei ivesto masyvo reiksmė indekse 0, 1, 2, 3... YRA DIDESNE uz pirmaja reiksme masyve
+                didziausiasSkaicius = Kintamasis[i];         // tai didziausia reiksme atsinaujina paeiliui 
             }
             
         }
@@ -170,9 +170,7 @@ console.log('Funkcija pavadinimu “isrinktiRaides”');
 console.log('');
 
 function isrinktiRaides (pirmas, antras) {
-    let rezultatas = '';
-    // let pirmas = '';
-    // let antras = pirmas[antras];
+    let rezultatas = '';                     // deklaruojamas rezultatas zodzio reiksme kur bus saugomos isrinktos raides
 
     if (typeof pirmas !== 'string') {
         return 'Pirmasis kintamasis yra netinkamo tipo.';
@@ -189,12 +187,24 @@ function isrinktiRaides (pirmas, antras) {
     if (antras > pirmas.length) {
         return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį';
     } else {
-        for (let i = antras - 1; i < pirmas.length; i += antras) {
+        for (let i = antras - 1; i < pirmas.length; i += antras) { // pradeda nuo indekso 'antras - 1' ir padidina 'antras' 
             rezultatas += pirmas[i];
         }
         return rezultatas;
     }
 }
+
+/*
+The loop starts from antras - 1 because array indices in JavaScript are zero-based, so the first character to be picked is at index antras - 1.
+
+The loop condition i < pirmas.length ensures that the loop continues as long as there are characters left in the string.
+
+i += antras increments the index by antras in each iteration, effectively skipping antras - 1 characters between each selected character.
+
+In each iteration, pirmas[i] (the character at the current index) is appended to rezultatas.
+
+After the loop completes, the function returns the concatenated string rezultatas.
+ */
 
 console.log(isrinktiRaides('abcdefg', 2));
 console.log(isrinktiRaides('abcdefghijkl', 3));
@@ -208,8 +218,8 @@ console.log('Funkcija pavadinimu “dalyba”');
 console.log('');
 
 function dalyba (pirmas1, antras2){
-    let rezultatas1 = 0;
-    if (arguments.length !== 2) {
+    let rezultatas1 = 0;   // naudojamas let kintamajam - dinaminis ir bus dirbama su skaiciais
+    if (arguments.length !== 2) {  // 
         return 'Ši funkcija reikalauja įvesti tiksliai 2 kintamuosius';
     }
     if (typeof pirmas1 !== "number" || isNaN(pirmas1) === true || !isFinite(pirmas1)) {
@@ -223,14 +233,11 @@ function dalyba (pirmas1, antras2){
     }
     rezultatas1 = pirmas1 / antras2;
     console.log(rezultatas1); // pirma reiksme atvaizduoja
-    const pirmasSkaiciusPoKablelio = Math.floor((rezultatas1 * 10) % 10); //gauti reiksme po kablelio atskirai
-    const sveikasisSkaicius = Math.floor(rezultatas1);  // gauti sveikus skaicius
-    const rezultatasSuVienuSkaiciumiPoKablelio = parseFloat(`${sveikasisSkaicius}.${pirmasSkaiciusPoKablelio}`);  // atvaizdavimas po vieną
+    const pirmasSkaiciusPoKablelio = Math.floor((rezultatas1 * 10) % 10); //gauti reiksme po kablelio atskirai i kintamaji issaugoti
+    const sveikasisSkaicius = Math.floor(rezultatas1);  // gauti sveikus skaicius i nesikeicianti kintamaji 
+    const rezultatasSuVienuSkaiciumiPoKablelio = parseFloat(`${sveikasisSkaicius}.${pirmasSkaiciusPoKablelio}`);  // atvaizdavimas po vieną ir parseFloat('5.0') converts the string back into a floating-point number.   be parseFloat '5.0' su parse float 5.0
     return rezultatasSuVienuSkaiciumiPoKablelio;
 }
-
-console.log(dalyba(1, 2));
-console.log(dalyba(0, 2));
 console.log(dalyba(-10, -2));
 console.log(dalyba(-1331, -23));
 console.log(dalyba(-1000000000, 200000));

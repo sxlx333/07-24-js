@@ -1,5 +1,5 @@
 /*
-ARRAY - sąrašas, masyvas, matricija, list'as, arėjus
+ARRAY - sąrašas, masyvas, matrica, list'as, arėjus
 */
 
 // laužtiniai skliaustai

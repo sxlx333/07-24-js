@@ -129,47 +129,59 @@ console.log(skaitmenuKiekisSkaiciuje(true));
 console.log(skaitmenuKiekisSkaiciuje('ads'));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
 
+console.clear();
+
+
+console.log('Funkcija pavadinimu “didziausiasSkaiciusSarase”');
+
+function didziausiasSkaiciusSarase(Kintamasis) {
+    let didziausiasSkaicius = Kintamasis[0];
+     if (Array.isArray(Kintamasis) === false) {
+        return ('Pateikta netinkamo tipo reikšmė');
+    } else if (Kintamasis.length === 0) {
+        return ('Pateiktas sąrašas, masyvas negali būti tuščias');
+    } else {
+        
+        for (let i = 0; i < Kintamasis.length; i++) {
+            
+            if (Kintamasis[i] > didziausiasSkaicius) {
+                didziausiasSkaicius = Kintamasis[i];
+            }
+            
+        }
+        return didziausiasSkaicius;
+    }
+    }
+
+
+console.log(didziausiasSkaiciusSarase([1]));
+console.log(didziausiasSkaiciusSarase([1, 2, 3]));
+console.log(didziausiasSkaiciusSarase([-5, 78, 14, 0, 18]));
+console.log(didziausiasSkaiciusSarase([69, 69, 69, 69, 66]));
+console.log(didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8]));
+console.log(didziausiasSkaiciusSarase('pomidoras'));
+console.log(didziausiasSkaiciusSarase([]));
+
+
 
 
 console.clear();
-function didziausiasSkaiciusSarase(Kintamasis) {
-     if (Array.isArray(Kintamasis) === false) {
-        return 'Pateikta netinkamo tipo reiksme', Kintamasis;
-    } else if (Kintamasis.length === 0) {
-        return 'Pateiktas sarasas negali buti tuscias', Kintamasis;
-    } else {
-        return'YAY', Kintamasis;
+console.log('Funkcija pavadinimu “isrinktiRaides”');
+
+function isrinktiRaides (pirmas, antras) {
+    let pirmas = '';
+    let antras = pirmas[antras];
+
+    if (typeof pirmas !== 'string') {
+        return 'Pirmasis kintamasis yra netinkamo tipo.';
+    } 
+    if (typeof pirmas )  {
+
     }
-    }
+
+}
 
 
-    // const didziausiasSkaicius = 0;
-    // for (let i = 0; i <= Kintamasis.length; i++) {
-        
-    //         didziausiasSkaicius == Kintamasis.length + 1
-    //         console.log((i + 1) + Kintamasis[i]);
-    //     }
-    // 
-
-console.log(didziausiasSkaiciusSarase(''));
-console.log(didziausiasSkaiciusSarase(222));
-console.log(didziausiasSkaiciusSarase('pomidoras'));
-console.log(didziausiasSkaiciusSarase([]));
-console.log(didziausiasSkaiciusSarase([1]));
-console.log(didziausiasSkaiciusSarase([1, 2, 3]));
-
-
-
-
-
-
-// let array = [1, 2, 3];
-// console.log(typeof array);
-// console.log(Array.isArray(2));
-// console.log(Array.isArray(''));
-// console.log(Array.isArray('labas'));
-// console.log(Array.isArray(1, 2, 3));
-// console.log(Array.isArray([1, 2, 3]));
 
 
 

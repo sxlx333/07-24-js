@@ -132,14 +132,31 @@ console.log(skaitmenuKiekisSkaiciuje(NaN));
 
 
 console.clear();
-// function didziausiasSkaiciusSarase(Kintamasis) {
-//     if (!Kintamasis == '') {
-//         console.log('Negali buti tuscias');
-//     } else if (typeof kintamasis != object) {
+function didziausiasSkaiciusSarase(Kintamasis) {
+     if (Array.isArray(Kintamasis) === false) {
+        return 'Pateikta netinkamo tipo reiksme', Kintamasis;
+    } else if (Kintamasis.length === 0) {
+        return 'Pateiktas sarasas negali buti tuscias', Kintamasis;
+    } else {
+        return'YAY', Kintamasis;
+    }
+    }
 
-//     }
-// }
 
+    // const didziausiasSkaicius = 0;
+    // for (let i = 0; i <= Kintamasis.length; i++) {
+        
+    //         didziausiasSkaicius == Kintamasis.length + 1
+    //         console.log((i + 1) + Kintamasis[i]);
+    //     }
+    // 
+
+console.log(didziausiasSkaiciusSarase(''));
+console.log(didziausiasSkaiciusSarase(222));
+console.log(didziausiasSkaiciusSarase('pomidoras'));
+console.log(didziausiasSkaiciusSarase([]));
+console.log(didziausiasSkaiciusSarase([1]));
+console.log(didziausiasSkaiciusSarase([1, 2, 3]));
 
 
 
@@ -148,6 +165,13 @@ console.clear();
 
 // let array = [1, 2, 3];
 // console.log(typeof array);
+// console.log(Array.isArray(2));
+// console.log(Array.isArray(''));
+// console.log(Array.isArray('labas'));
+// console.log(Array.isArray(1, 2, 3));
+// console.log(Array.isArray([1, 2, 3]));
+
+
 
 
 

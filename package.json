@@ -4,6 +4,10 @@
   "type":"module",  
   "main": "index.js",
   "scripts": {
+    "arraymethodsort": "node --watch ./js/method/array-sort.js",
+    "arraymethodforeach": "node --watch ./js/method/array-foreach.js",
+    "arraymethodevery": "node --watch ./js/method/array-every.js",
+    "arraymethodflat": "node --watch ./js/method/array-flat.js",
     "arrayfilter": "node --watch ./js/method/array-filter.js",
     "arraymap": "node --watch ./js/method/array-map.js",
     "array-method": "node --watch ./js/method/array.js",

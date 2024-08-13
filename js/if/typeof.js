@@ -29,7 +29,7 @@ console.log("-----------");
 console.log(typeof undefined);
 
 console.log("-----------");
-console.log(typeof []);
+console.log(typeof []);     //object
 console.log(typeof [1, 2]);
 console.log(typeof ['labas', 'rytas']);
 console.log(typeof {name: 'jonas', age: 99});
@@ -37,7 +37,7 @@ console.log(typeof null);
 
 
 console.log("-----------");
-console.log(Array.isArray([]));
+console.log(Array.isArray([]));    //true
 console.log(Array.isArray([1, 2]));
 console.log(Array.isArray(['labas', 'rytas']));
 
@@ -69,3 +69,8 @@ console.log(arTikrasObjektas(null));
 console.log(arTikrasObjektas(arTikrasObjektas));
 console.log(arTikrasObjektas([]));
 console.log(arTikrasObjektas({}));
+
+
+
+
+

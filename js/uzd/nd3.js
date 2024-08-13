@@ -175,9 +175,13 @@ function isrinktiRaides (pirmas, antras) {
     if (typeof pirmas !== 'string') {
         return 'Pirmasis kintamasis yra netinkamo tipo.';
     } 
-    if (typeof pirmas )  {
-
+    if (typeof pirmas === '' && pirmas.length > 100)  {
+        return 'Pirmojo kintamojo reiksmė yra netinkamo dydžio.';
     }
+    if (typeof antras !== 'number') {
+        return 'Antrasis kintamasis yra netinkamo tipo.';
+    }
+    if (antras <= 0)
 
 }
 

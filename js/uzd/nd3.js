@@ -167,10 +167,12 @@ console.log(didziausiasSkaiciusSarase([]));
 
 console.clear();
 console.log('Funkcija pavadinimu “isrinktiRaides”');
+console.log('');
 
 function isrinktiRaides (pirmas, antras) {
-    let pirmas = '';
-    let antras = pirmas[antras];
+    let rezultatas = '';
+    // let pirmas = '';
+    // let antras = pirmas[antras];
 
     if (typeof pirmas !== 'string') {
         return 'Pirmasis kintamasis yra netinkamo tipo.';
@@ -181,9 +183,67 @@ function isrinktiRaides (pirmas, antras) {
     if (typeof antras !== 'number') {
         return 'Antrasis kintamasis yra netinkamo tipo.';
     }
-    if (antras <= 0)
-
+    if (antras <= 0) {
+        return 'Antrasis skaičius turi būti didesnis už nulį';
+    }
+    if (antras > pirmas.length) {
+        return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį';
+    } else {
+        for (let i = antras - 1; i < pirmas.length; i += antras) {
+            rezultatas += pirmas[i];
+        }
+        return rezultatas;
+    }
 }
+
+console.log(isrinktiRaides('abcdefg', 2));
+console.log(isrinktiRaides('abcdefghijkl', 3));
+console.log(isrinktiRaides('abc', 0));
+console.log(isrinktiRaides('abc', 4));
+console.log(isrinktiRaides(1561, 2));
+
+
+console.clear();
+console.log('Funkcija pavadinimu “dalyba”');
+console.log('');
+
+function dalyba (pirmas1, antras2){
+    let rezultatas1 = 0;
+    if (arguments.length !== 2) {
+        return 'Ši funkcija reikalauja įvesti tiksliai 2 kintamuosius';
+    }
+    if (typeof pirmas1 !== "number" || isNaN(pirmas1) === true || !isFinite(pirmas1)) {
+        return 'Įveskite skaičių į pirmą funkcijos parametrą';
+    }
+    if (typeof antras2 !== "number" || isNaN(antras2) === true || !isFinite(antras2)) {
+        return 'Įveskite skaičių į antrą funkcijos parametrą';
+    }
+    if (antras2 === 0) {
+        return 'Antras skaitmuo negali būti nulis, negalima dalinti iš nulio';
+    }
+    rezultatas1 = pirmas1 / antras2;
+    console.log(rezultatas1); // pirma reiksme atvaizduoja
+    const pirmasSkaiciusPoKablelio = Math.floor((rezultatas1 * 10) % 10); //gauti reiksme po kablelio atskirai
+    const sveikasisSkaicius = Math.floor(rezultatas1);  // gauti sveikus skaicius
+    const rezultatasSuVienuSkaiciumiPoKablelio = parseFloat(`${sveikasisSkaicius}.${pirmasSkaiciusPoKablelio}`);  // atvaizdavimas po vieną
+    return rezultatasSuVienuSkaiciumiPoKablelio;
+}
+
+console.log(dalyba(1, 2));
+console.log(dalyba(0, 2));
+console.log(dalyba(-10, -2));
+console.log(dalyba(-1331, -23));
+console.log(dalyba(-1000000000, 200000));
+console.log(dalyba(1, 0));
+console.log(dalyba('', 1));
+console.log(dalyba(1, []));
+console.log(dalyba(0, {}));
+console.log(dalyba(NaN, 1));
+console.log(dalyba(Infinity, 1));
+console.log(dalyba(20, -Infinity));
+console.log(dalyba(undefined, -Infinity));
+console.log(dalyba(1));
+console.log(dalyba(1, 2, 3, 4));
 
 
 

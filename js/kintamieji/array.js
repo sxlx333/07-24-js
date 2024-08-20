@@ -1,5 +1,10 @@
 /*
 ARRAY - sąrašas, masyvas, matrica, list'as, arėjus
+
+array supaprastintas objektas        index pavirsta raktais
+string supaprastinas masyvas         raides pavirsta index
+
+string -> array -> object
 */
 
 // laužtiniai skliaustai

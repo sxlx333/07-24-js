@@ -1,4 +1,4 @@
-const marks = [10, [2, 8],[1, [2, [3, 4, 5, 6],],], [4, 6]];    // kaip dvimatis masyvas (3 nariai)
+const marks = [10, [2, 8],[1, [2, [3, 4, 5, 6],],], [4, 6]];    // kaip dvimatis masyvas (3 nariai, lygiai)
 console.log(marks);
 console.log(marks.flat());    // paima sarasa ir iskleidzia visas reiksmes pasalina [] masyve
 // [ 2, 3, 4, 5, 6 ] jau yra antro lygio ir nebeiskleidzia ju (galima panaudot flat 2 kartus)

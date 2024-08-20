@@ -284,3 +284,35 @@ console.log(marks);
 
 marks[1] = 8;
 console.log(marks);
+
+
+console.clear();
+const person = {
+    name: 'Jonas',
+    age: undefined,               // kai nezinoma reiksme
+    isMarried: undefined,
+};
+
+console.log(person);
+console.log(person.age);
+console.log(person.isMarried);
+person.age = 99;                    // overrided reiksme 
+console.log(person);
+person.isMarried = true;              //overrided reiksme
+console.log(person);
+console.log('-----------------------');
+
+console.log(person.address);         // kreipiamasi i nezinoma reiksme
+person.address = 'Stelmuzes azuolo g 1, Zarasai';      // sukuriama nauja reiksme objekte
+console.log(person);
+console.log(person.address);
+
+console.clear();
+
+const car = {}; // tuscias objektas
+console.log(car);
+
+car.brand = 'Audi';   // dinaminis key value reiksmiu priskyrimas
+car.model = '80';       // overridinimas is nieko i reiksme
+car.color = '#ff0000';
+console.log(car);

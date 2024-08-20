@@ -1,3 +1,10 @@
+/*
+SORT SU STRING, NUMBERS, OBJECTS
+
+naudojamos sort funkcijos specifines kad veiktu teisingai ir negrazintu tik false/true
+*/
+
+
 const abc = ['a', 'g', 't', 'b', 'e'];
 console.log(abc);
 
